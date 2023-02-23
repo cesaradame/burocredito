@@ -1,14 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
         <head>
-        <img src="LogoSecorse.png" alt="LogoSecorse">
-		<img src="Buroooo.png" alt="Buroooo" width="100" height="100" style="float: right">
+        <img src="images/LogoSecorse.png" alt="LogoSecorse">
+		<img src="images/Buroooo.png" alt="Buroooo" width="100" height="100" style="float: right">
         <title>Consultas</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous"></head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
         </head>
+        <header>
+            <div class="container">  
+                <i style="font-size:36px" class="fa" onclick="location.href= '/menu'">&#xf0a8;</i>
+            </div>
+        </header>
     <body>
 
         <div class="container mt-3">
@@ -36,7 +46,7 @@
                 <div class="mb-3 mt-3">
                     <label for="validationServer04" class="form-label">Producto o Servicio</label>
                     <select class="form-control" id="productoServicio" name="productoServicio"   aria-describedby="validationServer04Feedback" required >
-                                        <option selected disabled value="">Seleccione una opción</option>
+                                        <option selected disabled value="">Seleccione una opci&oacute;n</option>
                                         <option value="reporte">Reporte de crédito especial</option>
                                         <option value="reclamaciones">Reclamaciones</option>
                                         <option value="alertas">Alertas Buró</option>
@@ -54,7 +64,7 @@
                 <div class="mb-3 mt-3">
                     <label for="validationServer04" class="form-label">Motivo de la llamada</label>
                     <select class="form-control" id="motivoLlamada" name="motivoLlamada" aria-describedby="validationServer04Feedback" required>
-                      <option selected disabled value="">Seleccione una opción</option>
+                      <option selected disabled value="">Seleccione una opci&oacute;n</option>
                                         <option value="producto">Generación de Reporte De Crédito Especial</option>
                                         <option value="producto">Interpretación del Reporte de Crédito</option>
                                         <option value="producto">Estatus del Reporte de Crédito Especial</option>
@@ -85,7 +95,7 @@
                 <div class="mb-3 mt-3">
                     <label for="validationServer04" class="form-label">Especiales</label>
                     <select class="form-control" id="especiales" name="especiales" aria-describedby="validationServer04Feedback" required > 
-                                        <option selected disabled value="">Seleccione una opción</option>
+                                        <option selected disabled value="">Seleccione una opci&oacute;n</option>
                                         <option value="titula">No es el Titular</option>
                                         <option value="negacion">No se escucha / No contestan</option>
                                         <option value="equivocado">Número equivocado</option>
@@ -107,6 +117,6 @@
 
 <script>
     function limpiarFormulario() {
-      document.getElementById("consultas").reset();
+      document.getElementById("consultaSyA").reset();
     }
  </script>   

@@ -9,17 +9,17 @@ public class BuroController {
 	public String index() {
 		return "index";
 	}
-	
+
 	@GetMapping("/menu")
 	public String menu() {
 		return "menuP";
 	}
-	
+
 	@GetMapping("/altain")
 	public String altain() {
 		return "altaIndiv";
 	}
-	
+
 	@GetMapping("/altaMas")
 	public String altaMas() {
 		return "altaMasiva";
@@ -29,29 +29,41 @@ public class BuroController {
 	public String bajaIn() {
 		return "/bajaIndiv";
 	}
+
+	@GetMapping("/bajaMas")
+	public String bajaMas() {
+		return "/bajaMasiva";
+	}
+
+	@GetMapping("/consultasEj")
+	public String consultasEj() {
+		return "/consultasEjec";
+	}
+
+	@GetMapping("/consultasSupA")
+	public String consultasSupA() {
+		return "/consultasSupAdm";
+	}
+
+	@GetMapping("/formul")
+	public String formul() {
+		return "/formulario";
+	}
+
+	@GetMapping("/grafic")
+	public String grafic() {
+		return "/grafica";
+	}
 		
-		@GetMapping("/bajaMas")
-		public String bajaMas() {
-			return "/bajaMasiva";
-		}
-			@GetMapping("/consultasEj")
-			public String consultasEj() {
-				return "/consultasEjec";
-	}
-			
-			@GetMapping("/consultasSupA")
-			public String consultasSupA() {
-				return "/consultasSupAdm";
+	@GetMapping("/altaUs")
+	public String altaUs() {
+		return "/altaUsuarios";
 	}
 	
-			@GetMapping("/formul")
-			public String formul() {
-				return "/formulario";
-	}
-			@GetMapping("/grafic")
-			public String grafic() {
-				return "/grafica";
-	}
-			
 	
+	@GetMapping("/bajaUs")
+	public String bajaUs() {
+		return "/bajaUsuarios";
+	}		
+
 }

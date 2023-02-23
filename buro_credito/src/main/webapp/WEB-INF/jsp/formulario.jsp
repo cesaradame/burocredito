@@ -18,22 +18,34 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous"></head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
         </head>
-       <header>
-            <p>
-               <button type="button" class="btn btn-primary" onclick="location.href= '/menu'">Inicio </button>
-          </p>
-       </header> 
-    <body>
+        <header>
+            <div class="mb-3 mt-3">  
+                <i class='fas fa-home' style='font-size:36px' onclick="location.href= '/menu'"></i>
+            </div>
+            <br>
+        </header>
 
+    <body>
         <div class="container mt-3">
             <h3>Nuevo Registro</h3>
                 
-            <form action="/action_page.php" class="was-validated" id="newReg">
-                <div class="mb-3 mt-3">
-                    <button type="button" class="btn btn-outline-secondary" onclick="_encender()" >Persona Física</button>
-                    <button type="button" class="btn btn-outline-secondary" onclick="_apagar()">Persona Moral</button>
-                </div>
+            <form action="/formul" method="POST" class="was-validated">
+          
+                <div class="mb-3 mt-3">                    
+                    <input type="radio" class="form-check-input"  name="tpersona" value="Fisica" onclick="_apagar()">
+                    <label class="form-check-label" for="radio2">Persona F&iacute;sica</label>
+                    &nbsp;
+                    &nbsp;
+                    <input type="radio" class="form-check-input"  name="tpersona" value="Moral"  onclick="_encender()" checked>
+                    <label class="form-check-label" for="radio2">Persona Moral</label>
+                </div> 
+                
                 <div class="mb-3 mt-3">
                         <label for="nombre" class="form-label">Nombre:</label>
                         <input type="text" class="form-control" id="nombre"  name="nombre" required >
@@ -54,49 +66,49 @@
                 </div>
                 <div class="mb-3 mt-3">
                     <label for="validationServer04" class="form-label">Producto o Servicio</label>
-                    <select class="form-control" id="productoServicio" name="productoServicio"   aria-describedby="validationServer04Feedback" required >
-                                        <option selected disabled value="">Seleccione una opción</option>
-                                        <option value="reporte">Reporte de crédito especial</option>
-                                        <option value="reclamaciones">Reclamaciones</option>
-                                        <option value="alertas">Alertas Buró</option>
-                                        <option value="score">Score</option>
-                                        <option value="alerta">Alértame</option>
-                                        <option value="bloqueo">Bloqueo</option>
-                                        <option value="otras">Otras SIC</option>
-                                        <option value="gnral">General</option>
-                                        <option value="app">APP</option>
-                                        <option value="juicios">Juicios</option>
+                    <select class="form-control" id="producto" name="producto"   aria-describedby="validationServer04Feedback" required >
+                              <option selected disabled value="">Seleccione una opci&oacute;n</option>
+                                        <option value="Reporte de crédito especial">Reporte de cr&eacute;dito especial</option>
+                                        <option value="Reclamaciones">Reclamaciones</option>
+                                        <option value="Alertas Buró">Alertas Bur&oacute;</option>
+                                        <option value="Score">Score</option>
+                                        <option value="Alertame">Al&eacute;rtame</option>
+                                        <option value="Bloqueo">Bloqueo</option>
+                                        <option value="Otras SIC">Otras SIC</option>
+                                        <option value="General">General</option>
+                                        <option value="APP">APP</option>
+                                        <option value="Juicios">Juicios</option>
                     </select>
                     <div class="valid-feedback"></div>
                     <div class="invalid-feedback"></div>
                 </div>
                 <div class="mb-3 mt-3">
                     <label for="validationServer04" class="form-label">Motivo de la llamada</label>
-                    <select class="form-control" id="motivoLlamada" name="motivoLlamada" aria-describedby="validationServer04Feedback" required>
-                      <option selected disabled value="">Seleccione una opción</option>
-                                        <option value="producto">Generación de Reporte De Crédito Especial</option>
-                                        <option value="producto">Interpretación del Reporte de Crédito</option>
-                                        <option value="producto">Estatus del Reporte de Crédito Especial</option>
-                                        <option value="producto">Asesoría General del Historial Crediticio</option>
-                                        <option value="producto">Asesoría Reporte Automático</option>
-                                        <option value="producto">Cancelación del Reporte Automático</option>
-                                        <option value="producto">Asesoría para Registrar Reclamaciones</option>
-                                        <option value="producto">Estatus de Reclamaciones</option>
-                                        <option value="producto">Asesoría Respuesta de Reclamaciones</option>
-                                        <option value="producto">Contratación Alertas Buro</option>
-                                        <option value="producto">Asesoría Alertas Buro</option>
-                                        <option value="producto">Cancelación del Servicio AB</option>
-                                        <option value="producto">Asesoría Score</option>
-                                        <option value="producto">Comprar de Score</option>
-                                        <option value="producto">Asesoría Alértame</option>
-                                        <option value="producto">Cancelación del Servicio Alértame</option>
-                                        <option value="producto">Asesoría Bloqueo</option>
-                                        <option value="producto">Contratar Bloqueo</option>
-                                        <option value="producto">Asesoría y Dudas Otras SIC</option>
-                                        <option value="producto">Reclamaciones Otras SIC</option>
-                                        <option value="producto">Asesoria General Buro De Crédito PF</option>
-                                        <option value="producto">Asesoria App</option>
-                                        <option value="producto">Asesoria y Reclamacion de Juicios</option>
+                    <select class="form-control" id="motivo" name="motivo" aria-describedby="validationServer04Feedback" required>
+                      <option selected disabled value="">Seleccione una opci&oacute;n</option>
+                                        <option value="Generación de Reporte De Crédito Especial">Generaci&oacute;n de Reporte De Cr&eacute;dito Especial</option>
+                                        <option value="Interpretación del Reporte de Crédito">Interpretaci&oacute;n del Reporte de Cr&eacute;dito</option>
+                                        <option value="Estatus del Reporte de Crédito Especial">Estatus del Reporte de Cr&eacute;dito Especial</option>
+                                        <option value="Asesoría General del Historial Crediticio">Asesor&iacute;a General del Historial Crediticio</option>
+                                        <option value="Asesoría Reporte Automático">Asesor&iacute;a Reporte Autom&aacute;tico</option>
+                                        <option value="Cancelación del Reporte Automático">Cancelaci&oacute;n del Reporte Autom&aacute;tico</option>
+                                        <option value="Asesoría para Registrar Reclamaciones">Asesor&iacute;a para Registrar Reclamaciones</option>
+                                        <option value="Estatus de Reclamaciones">Estatus de Reclamaciones</option>
+                                        <option value="Asesoría Respuesta de Reclamaciones">Asesor&iacute;a Respuesta de Reclamaciones</option>
+                                        <option value="Contratación Alertas Buro">Contrataci&oacuten Alertas Bur&oacute;</option>
+                                        <option value="Asesoría Alertas Buro">Asesor&iacute;a Alertas Bur&oacute;</option>
+                                        <option value="Cancelación del Servicio AB">Cancelaci&oacute;n del Servicio AB</option>
+                                        <option value="Asesoría Score">Asesor&iacute;a Score</option>
+                                        <option value="Comprar de Score">Comprar de Score</option>
+                                        <option value="Asesoría Alértame">Asesor&iacute;a Al&eacute;rtame</option>
+                                        <option value="Cancelación del Servicio Alértame">Cancelaci&oacuten del Servicio Al&eacute;rtame</option>
+                                        <option value="Asesoría Bloqueo">Asesor&iacute;a Bloqueo</option>
+                                        <option value="Contratar Bloqueo">Contratar Bloqueo</option>
+                                        <option value="Asesoría y Dudas Otras SIC">Asesor&iacute;a y Dudas Otras SIC</option>
+                                        <option value="Reclamaciones Otras SIC">Reclamaciones Otras SIC</option>
+                                        <option value="Asesoria General Buro De Crédito PF">Asesor&iacute;a General Buro De Cr&eacute;dito PF</option>
+                                        <option value="Asesoria App">Asesor&iacute;a App</option>
+                                        <option value="Asesoria y Reclamacion de Juicios">Asesor&iacute;a y Reclamaci&oacuten de Juicios</option>
                     </select>
                     <div class="valid-feedback"></div>
                     <div class="invalid-feedback"></div>
@@ -104,35 +116,36 @@
                 <div class="mb-3 mt-3">
                     <label for="validationServer04" class="form-label">Especiales</label>
                     <select class="form-control" id="especiales" name="especiales" aria-describedby="validationServer04Feedback" required > 
-                                        <option selected disabled value="">Seleccione una opción</option>
-                                        <option value="titula">No es el Titular</option>
-                                        <option value="negacion">No se escucha / No contestan</option>
-                                        <option value="equivocado">Número equivocado</option>
-                                        <option value="secorto">Se corto la llamada</option>
+                                   <option selected disabled value="">Seleccione una opci&oacute;n</option>
+                                        <option value="No es el Titular">No es el Titular</option>
+                                        <option value="No se escucha / No contestan">No se escucha / No contestan</option>
+                                        <option value="Número equivocado">N&uacute;mero equivocado</option>
+                                        <option value="Se corto la llamada">Se corto la llamada</option>
                     </select>
                     <div class="valid-feedback"></div>
                     <div class="invalid-feedback"></div>
                 </div>
                 <div class="mb-3 mt-3">
                     <label for="comment">Comentarios</label>
-                    <textarea class="form-control" id="comment" name="comment" ></textarea>     
+                    <textarea class="form-control" id="comentarios" name="comentarios" ></textarea>     
                 </div>
                <div class="mb-3 mt-3"> 
-                    <label for="nombre" class="form-label">¿Se logró la venta?</label>
-
-                    <input type="radio" class="form-check-input"  name="ventaSi" value="si" onclick="_onProduct()" checked>
+                    <label for="ventaSN" class="form-label">&iquest;Se logr&oacute; la venta?   </label>
+                    &nbsp;
+                    &nbsp;
+                    <input type="radio" class="form-check-input"  name="venta" value="Si" onclick="_onProduct()" checked>
                     <label class="form-check-label" for="radio1">Si</label>
                     &nbsp;
                     &nbsp;
-                    <input type="radio" class="form-check-input"  name="ventaNo" value="no" onclick="_offProduct()" checked>
+                    <input type="radio" class="form-check-input"  name="venta" value="No" onclick="_offProduct()" checked>
                     <label class="form-check-label" for="radio1">No</label>
                 </div> 
                 <div class="mb-3 mt-3 off" id="prodVend">
                     <label for="validationServer04" class="form-label">Producto Vendido</label>
-                    <select class="form-control" id="prodVendido" name="prodVendido" aria-describedby="validationServer04Feedback" required > 
-                                        <option selected disabled value="">Seleccione una opción</option>
-                                        <option value="reporte">Reporte Buró</option>
-                                        <option value="alerta">Alerta Buró</option>
+                    <select class="form-control" id="pvendido" name="pvendido" aria-describedby="validationServer04Feedback"  > 
+                                        <option selected disabled value="">Seleccione una opci&oacute;n</option>
+                                        <option value="Reporte Buró">Reporte Bur&oacute;</option>
+                                        <option value="Alerta Buró">Alerta Bur&oacute;</option>
                     </select>
                     <div class="valid-feedback"></div>
                     <div class="invalid-feedback"></div>
@@ -141,7 +154,7 @@
 
                 <br><br>
                 <button type="submit" class="btn btn-primary">Guardar</button>
-                <button type="button" class="btn btn-danger" onclick="limpiarFormulario()" value="Limpiar formulario">Cancelar</button>
+                <button type="button" class="btn btn-danger" onclick="location.href= '/menu'">Cancelar</button>
             </form>
         </div>
 
@@ -156,6 +169,7 @@
   
 function _apagar() {
    document.getElementById("razonSoc").setAttribute('class', 'off');
+   
 }
 
 function _encender() {
@@ -168,5 +182,9 @@ function _onProduct() {
 
 function _offProduct() {
     document.getElementById("prodVend").setAttribute('class', 'off');
+}
+
+function _alerta(){
+    
 }
 </script>
